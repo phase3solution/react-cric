@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 // layouts
 
 import Admin from "layouts/Admin.js";
@@ -18,6 +20,7 @@ import Index from "views/Index.js";
 import Prediction from "views/Prediction";
 import PredictionDetails from 'views/PredictionDetails';
 import Criczine from 'views/Criczine';
+import SliderTest from 'views/SliderTest';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -33,6 +36,7 @@ ReactDOM.render(
       <Route path="/prediction/:slug" exact component={PredictionDetails} />
 
       <Route path="/criczine" exact component={Criczine} />
+      <Route path="/slider-test" exact component={SliderTest} />
 
       <Route path="/" exact component={Index} />
       {/* add redirect for first page */}

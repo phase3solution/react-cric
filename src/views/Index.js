@@ -10,6 +10,9 @@ import Note from "../layouts/Note"
 
 import LoadGif  from "assets/img/loader.gif"
 
+
+import Excerpt from './Excerpt';
+
 export default function Index() {
 
  
@@ -17,13 +20,15 @@ export default function Index() {
 
   const [items, setItems] = useState([]);
   const [cricketMatchPredictions, setPredictions] = useState([]);
+  const [cricdictionAds, setAds] = useState([]);
+
 
   useEffect(() => {
     let headers = new Headers();
 
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    headers.append('Origin','htthttps://www.cricdiction.com/');
+    headers.append('Origin','https://www.cricdiction.com/');
 
       fetch("https://www.cricdiction.com/wp-json/wp/v2/posts?categories=1061&per_page=3")
         .then(res => res.json())
@@ -50,11 +55,58 @@ export default function Index() {
           }
         )
 
+        fetch("https://www.cricdiction.com/wp-json/wp/v2/posts?categories=1031&per_page=6")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setAds(result);
+          },
+          (error) => {
+            console.log(error);
+            
+          }
+        )
+
 
 
     }, [])
 
 
+
+    var settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
 
 
   return (
@@ -64,11 +116,11 @@ export default function Index() {
  
 
       {/* Start::Cricket Match Prediction */}
-      <section className="pb-20 relative bg-white">
+      <section className="pb-12 relative bg-white">
    
         <div className="container mx-auto overflow-hidden pb-20">
 
-          <div className="flex flex-wrap items-center justify-center pt-32">
+          <div className="flex flex-wrap items-center justify-center pt-20">
 
             <div className="w-full mr-auto ml-auto mt-8">
                 <div className="justify-center flex flex-wrap relative">
@@ -133,7 +185,7 @@ export default function Index() {
   
 
       {/* Start::Cricket Match News */}
-      <section className="mt-14 md:mt-14 pb-40 relative bg-blueGray-100">
+      <section className="pb-12 relative bg-blueGray-100">
    
       <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
@@ -158,9 +210,7 @@ export default function Index() {
 
         <div className="container mx-auto">
 
-        {/* <div className="flex flex-wrap items-center justify-center py-4">
-                <i>Cricket News</i>
-        </div> */}
+     
 
 
             <div className="w-full mr-auto ml-auto py-4">
@@ -232,6 +282,9 @@ export default function Index() {
 
       </section>
       {/* End::Cricket Match Prediction */}
+
+
+      <Excerpt> </Excerpt>
 
       {/* Start::Footer Section */}
               <Note />
