@@ -1,0 +1,65 @@
+.progressWrapper, .content-box-heading{
+    display: none;
+}
+
+.content-container{
+    background-color: #ecf7fc;
+    padding: 5px;
+}
+
+
+
+
+/* .content-container:nth-of-type(3){ 
+    display: none;
+} */
+.rangeRefreshBtn{
+    display: none;
+}
+
+.css-1rrrg1o{
+    width: 100% !important;
+}
+
+.fusion-layout-column{
+    width: 100% !important;
+}
+
+/* img {
+    display: none;
+  } */
+
+  .fusion-fullwidth img{
+    display: none;
+  }
+
+  .fusion-fullwidth .content-container{
+    background-color: #f1f5f9 !important;
+  }
+
+  figure {
+    margin: 24px auto;
+    width: 100%;
+
+    
+  }
+  figcaption {
+    font-size: 0.7em;
+  }
+
+  iframe {
+    display: block;
+    margin: auto;
+  }
+
+  .text-yellow-300{
+    color: rgb(253 224 71);
+  }
+
+  .hover-text:hover{
+    border-bottom: 1px solid white;
+  }
+
+  .cricket-news-img{
+    max-height: 200px;
+  }
