@@ -115,7 +115,6 @@ export default function Index() {
 
  
 
-      {/* Start::Cricket Match Prediction */}
       <section className="pb-12 relative bg-white">
    
         <div className="container mx-auto overflow-hidden pb-20">
@@ -151,15 +150,15 @@ export default function Index() {
                     <div key={item.id} className="my-4 w-full lg:w-4/12 px-4">
                     
                         <div className={ Moment(item.date).isSame(Moment(), 'day')? 'bg-lightBlue-500   shadow-lg  p-8':'bg-blueGray-700   shadow-lg  p-8'} >
-                          <h1 className="text-lg text-yellow-300 font-bold">{Moment(item.date).format('D MMM YYYY')} <span> {Moment(item.date).isSame(Moment(), 'day')? ' / Live':'' } </span> </h1>
+                          <h1 className="text-lg text-yellow-300 font-black">{Moment(item.date).format('D MMM YYYY')} <span> {Moment(item.date).isSame(Moment(), 'day')? ' / Live':'' } </span> </h1>
                          
 
                         <Link
-                            to={'/prediction/'+item.slug }
+                            to={'/discussion/'+item.slug }
                             params={{ slug: item.slug }}
                         >
-                          <p className="text-lg text-white my-4 font-bold hover-text " >
-                            <span  dangerouslySetInnerHTML={{__html: item.title.rendered.substring(0, 130)}}></span>...
+                          <p className="text-lg text-white my-4 font-black hover-text " >
+                            <span  dangerouslySetInnerHTML={{__html: item.title.rendered.substring(0, 150)}}></span>...
                           </p>
                         </Link>
 
@@ -181,13 +180,11 @@ export default function Index() {
 
 
       </section>
-      {/* END::Cricket Match Prediction */}
   
 
-      {/* Start::Cricket Match News */}
       <section className="pb-12 relative bg-blueGray-100">
    
-      <div
+        <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
         >
@@ -205,13 +202,9 @@ export default function Index() {
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
-        </div>
-
+      </div>
 
         <div className="container mx-auto">
-
-     
-
 
             <div className="w-full mr-auto ml-auto py-4">
                 <div className="justify-center flex flex-wrap relative">
@@ -232,8 +225,7 @@ export default function Index() {
               </div>
             </div>
 
-
-          <div className="flex flex-wrap items-center">
+            <div className="flex flex-wrap items-center">
 
 
             {items.map(item => (
@@ -272,23 +264,39 @@ export default function Index() {
 
             ))}
 
-
-              
-
           </div>
     
         </div>
       
-
       </section>
-      {/* End::Cricket Match Prediction */}
 
+      <section className="mt-14 md:mt-14 pb-40  bg-blueGray-100">
+            
+          <div
+            className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+            style={{ transform: "translateZ(0)" }}
+            >
+            <svg
+                className="absolute bottom-0 overflow-hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                version="1.1"
+                viewBox="0 0 2560 100"
+                x="0"
+                y="0"
+            >
+                <polygon
+                className="text-blueGray-100 fill-current"
+                points="2560 0 2560 100 0 100"
+                ></polygon>
+            </svg>
+          </div>
+          <Excerpt/>
+      </section>
 
-      <Excerpt> </Excerpt>
+      
 
-      {/* Start::Footer Section */}
-              <Note />
-      {/* End::Footer Section */}
+      <Note />
      
       <Footer />
     </>

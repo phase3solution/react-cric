@@ -1,7 +1,5 @@
 import React,  { useEffect, useState }  from 'react'
-
 import { Link } from "react-router-dom";
-
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Note from "../layouts/Note"
@@ -33,33 +31,27 @@ export default function Prediction() {
         <>
           <IndexNavbar fixed />
 
-
-          <section className="header relative pt-24 items-center text-center justify-center flex max-h-860-px">
-            <div className="container mx-auto items-center flex flex-wrap">
-              <div className="w-full iitems-center justify-center px-4">
-                <div className="">
-                  <h2 className="font-semibold text-4xl text-blueGray-600">
-                  LIVE
-                  </h2>
-
-                  <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                    Prediction & Discussion 
-                  </p>
-                
+            <section className="header relative mb-8 pt-24 items-center text-center justify-center flex max-h-860-px">
+                <div className="container mx-auto items-center flex flex-wrap">
+                    <div className="w-full iitems-center justify-center px-4">
+                        <div className="post-title">
+                            <h1 className="font-bold text-4xl text-blueGray-600">
+                               Discussion
+                            </h1>
+                        </div>
+                        <p>Cricket Match Prediction</p>
+                    </div>
                 </div>
-              </div>
-            </div>
-    
+            </section>
 
-          </section>
+
+
     
-         {/* Start::Cricket Match Prediction */}
-        <section className="pb-20 relative bg-white">
+        <section className="pb-40 pt-12 relative bg-blueGray-100">
    
       <div className="container mx-auto overflow-hidden pb-20">
 
         <div className="flex flex-wrap items-center justify-center pt-32">
-              <i>Cricket Match Prediction</i>
               <div className="w-full  px-4 mr-auto ml-auto mt-8">
             
                 <div className="justify-center flex flex-wrap relative">

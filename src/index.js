@@ -19,6 +19,10 @@ import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 import Prediction from "views/Prediction";
 import PredictionDetails from 'views/PredictionDetails';
+
+import Discussion from "views/Discussion";
+import DiscussionDetails from "views/DiscussionDetails";
+
 import Criczine from 'views/Criczine';
 import SliderTest from 'views/SliderTest';
 
@@ -34,6 +38,9 @@ ReactDOM.render(
 
       <Route path="/prediction" exact component={Prediction} />
       <Route path="/prediction/:slug" exact component={PredictionDetails} />
+
+      <Route path="/discussion" exact component={Discussion} />
+      <Route path="/discussion/:slug" exact component={DiscussionDetails} />
 
       <Route path="/criczine" exact component={Criczine} />
       <Route path="/slider-test" exact component={SliderTest} />
