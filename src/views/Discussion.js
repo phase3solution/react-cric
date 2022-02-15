@@ -5,6 +5,7 @@ import Footer from "components/Footers/Footer.js";
 import Note from "../layouts/Note"
 import Moment from 'moment';
 import LoadGif  from "assets/img/loader.gif"
+import Seo from 'layouts/Seo';
 
 
 export default function Discussion() {
@@ -30,6 +31,14 @@ export default function Discussion() {
 
     return (
         <>
+
+            <Seo 
+            
+                title="Cricket Prediction, Who Will Win Today? Free Prediction Tips." 
+                description="Live cricket match prediction, Who will win , Today Match Prediction, Today Live Toss prediction, Live Cricket Match Scorecard Auto refresh Update." 
+            
+            />
+
             <IndexNavbar fixed />
 
             <section className="header relative mb-8 pt-24 items-center text-center justify-center flex max-h-860-px">

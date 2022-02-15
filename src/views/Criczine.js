@@ -1,11 +1,10 @@
 import React,  { useEffect, useState }  from 'react'
-
-import { Link } from "react-router-dom";
-
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Note from "../layouts/Note";
 import LoadGif  from "assets/img/loader.gif"
+import Seo from 'layouts/Seo';
+
 
 
 
@@ -39,6 +38,14 @@ export default function Criczine() {
 
         return (
             <>
+
+            <Seo 
+              
+              title="CRICZINE - Today Match Prediction" 
+              description="Get cricket news, schedules, match, team stats, fixtures, series results, video highlights, news, and more on CRICDICTION." 
+            
+            />
+
             <IndexNavbar fixed />
 
             <section className="header relative mb-8 pt-24 items-center text-center justify-center flex max-h-860-px">

@@ -13,7 +13,7 @@ export default function Excerpt() {
         headers.append('Accept', 'application/json');
         headers.append('Origin','https://www.cricdiction.com/');
     
-            fetch("https://www.cricdiction.com/wp-json/wp/v2/posts?categories=1031&per_page=6")
+            fetch("https://www.cricdiction.com/wp-json/wp/v2/posts?categories=1513&per_page=6")
             .then(res => res.json())
             .then(
               (result) => {
@@ -95,7 +95,7 @@ export default function Excerpt() {
                       <Slider {...settings}>
                         {cricdictionAds.map(sliderItem => (
                         <div key={sliderItem.id} className="my-4  px-4">
-                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  bg-lightBlue-500">
+                            <div className="flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  bg-lightBlue-500">
                                 <div>
                                     <span  dangerouslySetInnerHTML={{__html: sliderItem.excerpt.rendered}}></span>
                                 </div>

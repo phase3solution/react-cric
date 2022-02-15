@@ -1,26 +1,19 @@
-/*eslint-disable*/
 import React,  { useEffect, useState }  from 'react'
 import { Link } from "react-router-dom";
-
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Moment from 'moment';
-
 import Note from "../layouts/Note"
-
 import LoadGif  from "assets/img/loader.gif"
-
-
 import Excerpt from './Excerpt';
+
+import Seo from 'layouts/Seo';
 
 export default function Index() {
 
  
-
-
   const [items, setItems] = useState([]);
   const [cricketMatchPredictions, setPredictions] = useState([]);
-  const [cricdictionAds, setAds] = useState([]);
 
 
   useEffect(() => {
@@ -55,17 +48,6 @@ export default function Index() {
           }
         )
 
-        fetch("https://www.cricdiction.com/wp-json/wp/v2/posts?categories=1031&per_page=6")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setAds(result);
-          },
-          (error) => {
-            console.log(error);
-            
-          }
-        )
 
 
 
@@ -111,6 +93,16 @@ export default function Index() {
 
   return (
     <>
+
+  
+      <Seo 
+      
+        title="Today Cricket Match Prediction. Who Will Win Today&#039;s Match?" 
+        description="Today Cricket Match Prediction, Who Will Win today? Live Cricket score, Today Match, Predictions Who Will Win, Live Cricket Match Scorecard." 
+      
+      />
+
+
       <IndexNavbar fixed />
 
  

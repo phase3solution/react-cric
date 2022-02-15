@@ -8,6 +8,8 @@ import LoadGif  from "assets/img/loader.gif"
 import Note from "../layouts/Note";
 import Moment from 'moment';
 import Excerpt from './Excerpt';
+import Seo from 'layouts/Seo';
+
 
 
 
@@ -127,6 +129,14 @@ export default function PredictionDetails() {
     }else{
         return (
             <>
+
+            <Seo 
+              
+              title={item.title.rendered} 
+              description={item.title.rendered}  
+            
+            />
+
             <IndexNavbar fixed />
 
             <section className="header relative mb-8 pt-24 items-center text-center justify-center flex max-h-860-px">
