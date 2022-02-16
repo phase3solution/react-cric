@@ -65,7 +65,7 @@ export default function Criczine() {
 
             
 
-            <section className="pb-40 pt-12 relative bg-blueGray-100">
+            <section className="pb-40 pt-8 relative bg-blueGray-100">
    
               
 
@@ -91,7 +91,7 @@ export default function Criczine() {
                         {items.map(item => (
 
                             <div key={item.id} className="my-4 w-full lg:w-4/12 px-4">
-                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  bg-lightBlue-500">
+                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full  shadow-lg  bg-lightBlue-500">
                                 <img
                                 alt="..."
                                 

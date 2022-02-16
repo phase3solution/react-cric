@@ -1,70 +1,44 @@
 import React from 'react'
-import Slider from 'react-slick'
+// Core modules imports are same as usual
+import { Navigation, Pagination } from 'swiper';
+// Direct React component imports
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import 'swiper/modules/effect-fade/effect-fade';
+import "swiper/modules/navigation/navigation";
+import "swiper/modules/pagination/pagination";
 
 export default function SliderTest() {
-    var settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      };
+   
     return (
 
     <div>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-        </Slider>
+      <div className="container">
+        <div className="w-full mx-auto">
+            <h1>Slider Test</h1>
+            <Swiper
+              modules={[Navigation, Pagination]}
+                spaceBetween={30}
+                slidesPerView={3}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                freeMode = {true}
+                pagination={{ 
+                  clickable: true ,
+                  el: ".swiper-pagination",
+                
+                }}
+              >
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+              <SwiperSlide>Slide 4</SwiperSlide>
+            </Swiper>
+        </div>
+      
+      </div>
+         
     </div>
 
 

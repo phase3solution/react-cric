@@ -96,7 +96,7 @@ export default function DiscussionDetails() {
                 </div>
             </section>
 
-            <section className="relative bg-blueGray-100 pt-12">
+            <section className="relative bg-blueGray-100 pt-8">
 
                 <div className="container bg-white mx-auto overflow-hidden">
                     <div className="flex flex-wrap items-center justify-center py-10">

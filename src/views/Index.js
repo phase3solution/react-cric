@@ -133,7 +133,7 @@ export default function Index() {
             </div>
                   
 
-                <div className="w-full  px-4 mr-auto ml-auto mt-8">
+                <div className="w-full   mr-auto ml-auto mt-8">
              
                   <div className="justify-center flex flex-wrap relative">
                 
@@ -223,7 +223,7 @@ export default function Index() {
             {items.map(item => (
 
               <div key={item.id} className="my-4 w-full lg:w-4/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  bg-lightBlue-500">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full  shadow-lg  bg-lightBlue-500">
                   <img
                     alt="..."
                   

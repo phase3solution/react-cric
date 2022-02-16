@@ -57,7 +57,7 @@ export default function Discussion() {
 
 
     
-            <section className="pb-40 pt-12 relative bg-blueGray-100">
+            <section className="pb-40 pt-8 relative bg-blueGray-100">
     
                 <div className="container mx-auto overflow-hidden pb-20">
 
@@ -76,7 +76,7 @@ export default function Discussion() {
                             </div>
                         </div>
                   
-                        <div className="w-full  px-4 mr-auto ml-auto ">
+                        <div className="w-full   mr-auto ml-auto ">
                     
                             <div className="justify-center flex flex-wrap relative">
                     
